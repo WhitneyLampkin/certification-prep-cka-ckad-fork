@@ -190,6 +190,8 @@ To manage and acces namespaces, use the following flags and commands:
 | `-n namespace` | Specifies the namespace in which the `kubectl` command should operate, allowing you to target resources within that specific namespace. |
 | `--all-namespaces` or `-A` | Indicates that the `kubectl` command should operate across all namespaces in the Kubernetes cluster, providing a global scope for resource operations. |
 | `kubectl create namespace MyNamespace` | Creates a new Kubernetes namespace with the specified name. |
+| `kubectl get ns` | Gets the list of default namespaces available. |
+| `kubectl get all -A` | Get all resources sorted by namespace. | 
 
 In YAML files, the resource's namespace is specified within the `metadata` configuration as follows:
 
