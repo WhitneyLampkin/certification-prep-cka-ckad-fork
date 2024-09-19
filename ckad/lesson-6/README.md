@@ -33,6 +33,14 @@ Additionally, in addition to advanced features of Pods, this lesson will also co
 
 There are several techniques for troubleshooting a Pod in Kubernetes, such as describing a Pod to retrieve details about its state, connecting to a Pod and running commands inside to investigate what happened, or reviewing the logs using `kubectl`.
 
+| Troubleshooting Technique | Kubectl Command |
+| - | - |
+| Pod State | `kubectl describe` |
+| Resource Field Description | `kubectl explain pods.spec.fieldName` |
+| Connect to Pod | `kubectl exec -it PodName -- sh` |
+| Pod Logs | `kubectl logs` |
+| Port Forwarding | `kubectl port-forward MyPod LocalPort:PodPort` |
+
 
 ### ⭐ Pod State
 
