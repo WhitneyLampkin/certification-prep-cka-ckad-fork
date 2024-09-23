@@ -74,6 +74,15 @@ Security Context is used to define privilege and access control in Pods. It incl
 
 The `SecurityContext` can be applied to the Pod or to a container. When `SecurityContext` prevents a Pod from running successfully, an event will be logged and you can review it with `kubectl describe` and analyze it with `kubectl logs` on failing Pods.
 
+| Command | Description |
+| ------- | ----------- |
+| k apply -f [SC_YAML_FILE] | Creates or updates a Security Context resource. |
+| k exec -it [SC_POD_NAME] -- sh | Interact with the pod that has a Security Context defined. |
+
+| Command | Description |
+| ------- | ----------- |
+| ps | Shows all processes and the USER running them. |
+
 ## Jobs and Cron Jobs
 
 Pods are expected to run indefinitely unless they encounter a failure or you manually stop them; their execution is not expected to terminate. In contrast, Jobs are designed for one-shot tasks, such as backups, functions, or batch processing. Jobs are used to execute a task a specific number of times, while Cron Jobs are used for tasks that need to run on a regular schedule.
